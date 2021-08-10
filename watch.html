@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing Video</title>
+    <script>
+        var params = new window.URLSearchParams(window.location.search);
+        let videoID = params.get('v')
+    </script>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="video">
+
+    </div>
+    <script src="jquery/jquery-3.6.0.js"></script>
+    <script>
+        let video = "<iframe  width='100%' height='800' src='//www.youtube.com/embed/"+ videoID +"?autoplay=1' autoplay; allow='fullscreen; autoplay' ></iframe>";
+        $(document).ready(function () {
+            $('#video').append(video);
+        });
+
+    </script>
+</body>
+</html>
